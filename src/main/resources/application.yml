@@ -1,32 +1,32 @@
-#spring:
-#  kafka:
-#    consumer:
-#      bootstrap-servers: localhost:9092
-#      group-id: group_id
-#      auto-offset-reset: earliest
-#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-#    producer:
-#      bootstrap-servers: localhost:9092
-#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-
 spring:
   kafka:
-    bootstrap.servers: localhost:9092
-    polling.timeout: 10000
     consumer:
-      order:
-        name: queuing.generated_project_for_tests.order
-        enabled: true
-        '[key.deserializer]': org.apache.kafka.common.serialization.StringDeserializer
-        '[value.deserializer]': tech.ippon.generated.service.kafka.deserializer.OrderDeserializer
-        '[group.id]': generated-project-for-tests
-        '[auto.offset.reset]': earliest
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
     producer:
-      order:
-        name: queuing.generated_project_for_tests.order
-        enabled: true
-        '[key.serializer]': org.apache.kafka.common.serialization.StringSerializer
-        '[value.serializer]': tech.ippon.generated.service.kafka.serializer.OrderSerializer
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+
+#spring:
+#  kafka:
+#    bootstrap.servers: localhost:9092
+#    polling.timeout: 10000
+#    consumer:
+#      order:
+#        name: queuing.generated_project_for_tests.order
+#        enabled: true
+#        '[key.deserializer]': org.apache.kafka.common.serialization.StringDeserializer
+#        '[value.deserializer]': tech.ippon.generated.service.kafka.deserializer.OrderDeserializer
+#        '[group.id]': generated-project-for-tests
+#        '[auto.offset.reset]': earliest
+#    producer:
+#      order:
+#        name: queuing.generated_project_for_tests.order
+#        enabled: true
+#        '[key.serializer]': org.apache.kafka.common.serialization.StringSerializer
+#        '[value.serializer]': tech.ippon.generated.service.kafka.serializer.OrderSerializer

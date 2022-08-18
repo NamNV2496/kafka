@@ -1,4 +1,4 @@
-# ``Need: docker for windows
+# Need: docker for windows
 
 step 1: open cmd 
 
@@ -23,3 +23,9 @@ output on console
 ```text
 Received Message in group - group-id: kafka
 ```
+
+Version:
+
+- spring-boot-starter-parent 2.3.0 in *- master -* branch
+  
+- spring-boot-starter-parent 2.7.2 in *- spring_parent_2_7_2 -* branch
