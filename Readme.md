@@ -40,6 +40,7 @@ curl --location --request GET 'http://localhost:8080/send' \
 output on console
 
 ```text
+
 Received Message in group - group-id: hello
 ```
 
@@ -48,11 +49,11 @@ Received Message in group - group-id: hello
 
 
 ## NOTE
+
 Version:
 
 - spring-boot-starter-parent 2.3.0 in *- master -* branch
   
 - spring-boot-starter-parent 2.7.2 in *- spring_parent_2_7_2 -* branch
-
 
 to access kafka manager in UI: http://localhost:9000
